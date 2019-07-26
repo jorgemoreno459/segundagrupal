@@ -1,0 +1,55 @@
+{{>header}}
+<div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Crear nuevo curso</h4>
+    <form action="/agregar" class="needs-validation" method="post">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName">ID</label>
+                <input type="number" name="id" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">Nombre</label>
+                <input type="text" name="nombre" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="address">Descripcion</label>
+            <input type="text" name="descripcion" class="form-control" id="address" placeholder="Descricion del curso"
+                required="">
+            <div class="invalid-feedback">
+                Se requiere este campo
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label for="country">Modalidad</label>
+                <select name="modalidad" class="custom-select d-block w-100" id="modalidad">
+                    <option value="">...</option>
+                    <option value="virtual">Virtual</option>
+                    <option value="presencial">Presencial</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="zip">valor</label>
+                <input type="number" name="valor" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="zip">intesidad horaria</label>
+            <input name="intHoraria" vale="" type="number" class="form-control" id="zip" placeholder="">
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">GUARDAR</button>
+    </form>
+</div>
+{{>footer}}

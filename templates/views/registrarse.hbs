@@ -1,0 +1,60 @@
+{{>header}}
+<div class="col-md-10 order-md-10 container">
+    <h4 class="mb-3">Registrarse</h4>
+    <form action="/" class="needs-validation" method="post">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName">Cedula</label>
+                <input type="number" name="cedula" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">Nombre</label>
+                <input type="text" name="nombre" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 mb-6">
+                <label for="zip">correo</label>
+                <input type="email" name="correo" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="zip">telefono</label>
+                <input type="number" name="telefono" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="country"> ROL </label>
+                <select name="rol" class="custom-select d-block w-100" id="rol" required="">
+                    <option value="aspirante">aspirante</option>
+                    <option value="coordinador">coordinador</option>
+                </select>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="zip">contraseña</label>
+                <input type="password" name="contraseña" class="form-control" id="zip" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Se requiere este campo
+                </div>
+            </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">REGISTRAR</button>
+    </form>
+</div>
+</main>
+{{>footer}}

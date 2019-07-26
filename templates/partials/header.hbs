@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Bootstrap css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <title>Tercera Entrega</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">INICIO </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="/vercursos">ver cursos </a>
+                </li>
+                {{#if aspirante}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/inscribirse">inscribirse en curso</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/salir" method="get">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Salir</button>
+            </form>
+            {{else if coordinador}}
+            <li class="nav-item">
+                <a class="nav-link" href="/agregar">agregar curso</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ver">ver inscritos</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/salir" method="get">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Salir</button>
+            </form>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/registrarse">REGISTRARSE</a>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/ingresar" method="post">
+                <input class="form-control mr-sm-2" type="text" name="nombre" placeholder="Nombre de usuario">
+                <input class="form-control mr-sm-2" type="password" name="contraseña" placeholder="Contraseña">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Ingresar</button>
+            </form>
+            {{/if}}
+        </div>
+    </nav>
+    <main role="main">
+        <div class="jumbotron container" style="border-left: 1px solid silver; border-right: 1px solid silver  ">
+            <div class="jumbotron">
+                <img src="img/banner.jpg" class="img-fluid">
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <img src="img/logo-ppal.jpg" class="img-fluid">
+                </div>
+                <div class="d-none d-md-block col-md-4">
+                    <img src="img/gel2.jpg" class="img-fluid">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <h3> {{titulo}} </h3>
+                </div>
+            </div>
